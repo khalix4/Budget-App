@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: web-main
-          image: your-demo-web-image
+          image: khalix/budget-app:latest
           env:
             - name: RAILS_ENV
               valueFrom:
                 secretKeyRef:
-                  name: demo-web-credentials
+                  name: postgres-credentials
                   key: RAILS_ENV
             - name: POSTGRES_HOST
               value: demo-postgres
